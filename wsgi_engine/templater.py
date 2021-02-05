@@ -1,4 +1,5 @@
 from jinja2 import Template
+"""template engine"""
 
 
 def render(template, **kwargs):
@@ -8,7 +9,7 @@ def render(template, **kwargs):
 
 
 if __name__ == '__main__':
-    test = render('hello.html', object_list=[
+    test = render('../templates/hello.html', object_list=[
         {'name': "name1"},
         {'name': "name2"},
         {'name': "name3"}

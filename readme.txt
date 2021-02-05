@@ -2,7 +2,7 @@
 
 1)Установить все зависимости из requirements.txt (gunicorn, jinja2)
 2)Перейти в папку с фреймоверком
-3)Выполнить команду 'gunicorn wsgi:application'
+3)Выполнить команду 'gunicorn manage:application'
 4)В браузере перейти по ссылкам
 http://127.0.0.1:8000/hello/
 http://127.0.0.1:8000/

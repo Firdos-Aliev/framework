@@ -1,13 +1,13 @@
-from templater import render
+from wsgi_engine.templater import render
+"""views"""
 
 
-# любой контроллер должен возвращать код и html страницу принимая request
 def index(request):
     return "200", [b'index']
 
 
 def hello(request):
-    return "200", [render('hello.html', object_list=[
+    return "200", [render('templates/hello.html', object_list=[
         {'name': "name.0"},
         {'name': "name.1"},
         {'name': "name.2"}
