@@ -4,4 +4,5 @@ import views
 urls = {
     '/': views.index,
     '/hello/': views.hello,
+    '/form/': views.form,
 }
