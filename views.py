@@ -9,7 +9,7 @@ def index(request):
 
 def hello(request):
     print(f"request: {request}")
-    return "200", [render('templates/hello.html', object_list=[
+    return "200", [render('hello.html', object_list=[
         {'name': "name.0"},
         {'name': "name.1"},
         {'name': "name.2"}
@@ -18,4 +18,4 @@ def hello(request):
 
 def form(request):
     print(f"request: {request}")
-    return "200", [render('templates/form.html').encode('utf-8')]
+    return "200", [render('form.html').encode('utf-8')]

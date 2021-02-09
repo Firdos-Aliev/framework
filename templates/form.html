@@ -1,15 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
+{% extends "root.html" %}
+
+{% block container %}
     <form method="post">
         <input type="text" name="name" value="name">
         <input type="email" name="email" value="email@email.com">
         <input type="text" name="text" value="text">
         <input type="submit" value="Send">
     </form>
-</body>
-</html>
+{% endblock %}

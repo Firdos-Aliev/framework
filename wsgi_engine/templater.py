@@ -1,15 +1,18 @@
-from jinja2 import Template
+from jinja2 import FileSystemLoader, Template
+from jinja2.environment import Environment
+
 """template engine"""
 
 
-def render(template, **kwargs):
-    with open(template, encoding='utf-8') as file:
-        template = Template(file.read())
+def render(template_name, folder='templates', **kwargs):
+    """render function template"""
+    environment = Environment(loader=FileSystemLoader(folder))
+    template = environment.get_template(template_name)
     return template.render(**kwargs)
 
 
 if __name__ == '__main__':
-    test = render('../templates/hello.html', object_list=[
+    test = render('hello.html', folder='../templates', object_list=[
         {'name': "name1"},
         {'name': "name2"},
         {'name': "name3"}
