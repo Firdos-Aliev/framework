@@ -7,9 +7,11 @@
     {% block js %}{% endblock %}
 </head>
 <body>
+    {% include "includes/menu.html" %}
     <div class="container">
         {% block container %}
         {% endblock %}
     </div>
+    {% include "includes/footer.html" %}
 </body>
 </html>

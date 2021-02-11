@@ -4,7 +4,7 @@ from wsgi_engine.templater import render
 
 def index(request):
     print(f"request: {request}")
-    return "200", [b'index']
+    return "200", [render('index.html').encode('utf-8')]
 
 
 def hello(request):
