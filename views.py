@@ -1,17 +1,21 @@
 from wsgi_engine.templater import render
 from models import Manager
+from logger import Logger
 
 """views"""
 
 manager = Manager()
+logger = Logger("logger3")
 
 
 def index(request):
+    logger.log("info", "index")
     print(f"request: {request}")
     return "200", [render('index.html').encode('utf-8')]
 
 
 def hello(request):
+    logger.log("info", "hello")
     print(f"request: {request}")
     return "200", [render('hello.html', object_list=[
         {'name': "name-0"},
@@ -21,11 +25,13 @@ def hello(request):
 
 
 def form(request):
+    logger.log("info", "form")
     print(f"request: {request}")
     return "200", [render('form.html').encode('utf-8')]
 
 
 def users_list(request):
+    logger.log("info", "users_list")
     print(f"request: {request}")
     users = manager.get_users()
     users_name = [f"{i.name} : {i}" for i in users]
@@ -34,6 +40,7 @@ def users_list(request):
 
 
 def course_list(request):
+    logger.log("info", "course_list")
     print(f"request: {request}")
     courses = manager.get_courses()
     cousres_name = [f"{i.name} : {i.category.name}" for i in courses]
@@ -41,6 +48,7 @@ def course_list(request):
 
 
 def category_list(request):
+    logger.log("info", "category_list")
     print(f"request: {request}")
     category = manager.get_categories()
     category_name = [i.name for i in category]
@@ -48,6 +56,7 @@ def category_list(request):
 
 
 def add_category(request):
+    logger.log("info", "add_category")
     print(f"request: {request}")
     if request['method'] == 'POST':
         name = request['data']['name']
@@ -58,6 +67,7 @@ def add_category(request):
 
 
 def add_user(request):
+    logger.log("info", "add_user")
     print(f"request: {request}")
     if request['method'] == 'POST':
         # take data
@@ -74,6 +84,7 @@ def add_user(request):
 
 
 def add_course(request):
+    logger.log("info", "add_course")
     print(f"request: {request}")
     if request['method'] == 'POST':
         # take data
