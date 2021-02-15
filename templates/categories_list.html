@@ -1,0 +1,9 @@
+{% extends "root.html" %}
+
+{% block container %}
+    <h3>Список категорий</h3>
+    {% for i in categories %}
+        <p>{{ i }}</p>
+    {% endfor %}
+    <a href="/add_category/">Добавить категорию</a>
+{% endblock %}

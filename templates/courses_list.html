@@ -1,0 +1,9 @@
+{% extends "root.html" %}
+
+{% block container %}
+    <h3>Список курсов</h3>
+    {% for i in courses %}
+        <p>{{ i }}</p>
+    {% endfor %}
+    <a href="/add_course/">Добавить курс</a>
+{% endblock %}
