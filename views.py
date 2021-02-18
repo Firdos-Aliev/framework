@@ -1,6 +1,7 @@
 from wsgi_engine.templater import render
 from models import Manager
 from logger import Logger
+from patterns.decorators import debug
 
 """views"""
 
@@ -8,12 +9,14 @@ manager = Manager()
 logger = Logger("logger3")
 
 
+@debug
 def index(request):
     logger.log("info", "index")
     print(f"request: {request}")
     return "200", [render('index.html').encode('utf-8')]
 
 
+@debug
 def hello(request):
     logger.log("info", "hello")
     print(f"request: {request}")
@@ -24,12 +27,14 @@ def hello(request):
     ]).encode('utf-8')]
 
 
+@debug
 def form(request):
     logger.log("info", "form")
     print(f"request: {request}")
     return "200", [render('form.html').encode('utf-8')]
 
 
+@debug
 def users_list(request):
     logger.log("info", "users_list")
     print(f"request: {request}")
@@ -39,6 +44,7 @@ def users_list(request):
     return "200", [render('users_list.html', users=users_name).encode('utf-8')]
 
 
+@debug
 def course_list(request):
     logger.log("info", "course_list")
     print(f"request: {request}")
@@ -47,6 +53,7 @@ def course_list(request):
     return "200", [render('courses_list.html', courses=cousres_name).encode('utf-8')]
 
 
+@debug
 def category_list(request):
     logger.log("info", "category_list")
     print(f"request: {request}")
@@ -55,6 +62,7 @@ def category_list(request):
     return "200", [render('categories_list.html', categories=category_name).encode('utf-8')]
 
 
+@debug
 def add_category(request):
     logger.log("info", "add_category")
     print(f"request: {request}")
@@ -66,6 +74,7 @@ def add_category(request):
     return "200", [render('add_category.html').encode('utf-8')]
 
 
+@debug
 def add_user(request):
     logger.log("info", "add_user")
     print(f"request: {request}")
@@ -83,6 +92,7 @@ def add_user(request):
     return "200", [render('add_user.html').encode('utf-8')]
 
 
+@debug
 def add_course(request):
     logger.log("info", "add_course")
     print(f"request: {request}")
