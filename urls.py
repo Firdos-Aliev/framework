@@ -3,7 +3,6 @@ import views
 """address manager"""
 
 # можно передавать в request ссылки и их имена, чтобы можно было использовать в шаблонах
-# '/': views.index,
 urls = {
     '/': views.index,
     '/hello/': views.hello,
@@ -14,4 +13,5 @@ urls = {
     '/add_user/': views.add_user,
     '/add_course/': views.add_course,
     '/add_category/': views.add_category,
+    '/add_composite_category/': views.add_composite_category,
 }

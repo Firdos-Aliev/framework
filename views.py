@@ -75,6 +75,24 @@ def add_category(request):
 
 
 @debug
+def add_composite_category(request):
+    logger.log("info", "add_composite_category")
+    print(f"request: {request}")
+    if request['method'] == 'POST':
+        name = request['data']['name']
+        composite_category_name = request['data']['selected']
+
+        manager.add_composite_to_composite(composite_category_name, name)
+    else:
+        categories = manager.get_categories()
+        categories_name = [i.name for i in categories]
+        return "200", [render('add_composite_category.html', categories=categories_name).encode('utf-8')]
+    categories = manager.get_categories()
+    categories_name = [i.name for i in categories]
+    return "200", [render('add_composite_category.html', categories=categories_name).encode('utf-8')]
+
+
+@debug
 def add_user(request):
     logger.log("info", "add_user")
     print(f"request: {request}")
