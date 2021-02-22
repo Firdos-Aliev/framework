@@ -1,4 +1,5 @@
 from wsgi_engine.templater import render
+from wsgi_engine.CBV import ListView
 from models import Manager
 from logger import Logger
 from patterns.decorators import debug
@@ -129,5 +130,31 @@ def add_course(request):
     return "200", [render('add_course.html', categories=categories_name).encode('utf-8')]
 
 
-if "__main__" == __name__:
-    pass
+@debug
+def add_user_to_course(request):
+    if request["method"] == "POST":
+
+        user_name = request['data']['name']
+        course_name = request['data']['courses']
+        course_replaced = course_name.replace("+", " ")
+        user = manager.get_user_by_name(user_name)
+        course = manager.get_course_by_name(course_replaced)
+        course.add_user(user)
+    else:
+        courses = [i.get_name() for i in manager.get_courses()]
+        return "200", [render('add_user_to_course.html', courses=courses).encode('utf-8')]
+    courses = [course.get_name() for course in manager.get_courses()]
+    return "200", [render('add_user_to_course.html', courses=courses).encode('utf-8')]
+
+
+class AllStudents(ListView):
+    template_name = "students.html"
+
+    def query_set(self):
+        users = manager.get_users()
+        users_name = [f"{i.name} : {i}" for i in users if i.__str__() == "студент"]
+        return users_name
+
+    def logger(self):
+        logger.log("info", "AllStudents CBV")
+

@@ -89,8 +89,13 @@ class Course:
     def __init__(self, name, category: CompositeCategory):
         self.name = name
         self.category = category
-        self.students = []
-        self.teachers = []
+        self.users = []
+
+    def add_user(self, user: User):
+        self.users.append(user)
+
+    def get_name(self):
+        return self.name
 
 
 cat1 = Category("cat1")
@@ -114,9 +119,9 @@ class Manager:
     # добавил несколько обьектов, что при запуске не было пустым
     users = [Student("user1"), Student("user2"), Teacher("teacher1")]
     categories = [composite1, composite2]
-    courses = [Course("Основы Python", categories[0]),
-               Course("Продвинутый Python", categories[0]),
-               Course("С++ для маленьких", categories[1])]
+    courses = [Course("Basic Python", categories[0]),
+               Course("Cpp for beginers", categories[0]),
+               Course("Java PRO", categories[1])]
 
     def create_factory(self, user_type: str) -> UserFactory:
         type_list = {
@@ -130,6 +135,12 @@ class Manager:
 
     def get_users(self):
         return self.users
+
+    def get_user_by_name(self, name):
+        for user in self.users:
+            if user.name == name:
+                return user
+        return None
 
     def add_category(self, name):
         category = CompositeCategory(name)
@@ -165,6 +176,12 @@ class Manager:
 
     def get_courses(self):
         return self.courses
+
+    def get_course_by_name(self, name):
+        for i in self.courses:
+            if i.get_name() == name:
+                return i
+        return None
 
 
 if __name__ == "__main__":

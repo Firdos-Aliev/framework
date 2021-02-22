@@ -1,0 +1,13 @@
+{% extends "root.html" %}
+
+{% block container %}
+    <form method="post">
+        <input type="text" name="name" value="name">
+        <select name="courses">
+            {% for i in courses %}
+                <option>{{ i }}</option>
+            {% endfor %}
+        </select>
+        <input type="submit" value="Send">
+    </form>
+{% endblock %}

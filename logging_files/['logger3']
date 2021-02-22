@@ -195,3 +195,53 @@ info: ['logger3'] | category_list
 info: ['logger3'] | add_composite_category
 info: ['logger3'] | add_composite_category
 info: ['logger3'] | add_composite_category
+info: ['logger3'] | index
+info: ['logger3'] | category_list
+info: ['logger3'] | course_list
+info: ['logger3'] | users_list
+info: ['logger3'] | course_list
+info: ['logger3'] | category_list
+info: ['logger3'] | add_category
+info: ['logger3'] | category_list
+info: ['logger3'] | add_composite_category
+info: ['logger3'] | category_list
+info: ['logger3'] | users_list
+info: ['logger3'] | add_user
+info: ['logger3'] | add_user
+info: ['logger3'] | users_list
+info: ['logger3'] | add_user
+info: ['logger3'] | index
+info: ['logger3'] | course_list
+info: ['logger3'] | category_list
+info: ['logger3'] | hello
+info: ['logger3'] | hello
+info: ['logger3'] | index
+info: ['logger3'] | course_list
+info: ['logger3'] | add_course
+info: ['logger3'] | add_course
+info: ['logger3'] | users_list
+info: ['logger3'] | users_list
+info: ['logger3'] | course_list
+info: ['logger3'] | AllStudents CBV
+info: ['logger3'] | AllStudents CBV
+info: ['logger3'] | AllStudents CBV
+info: ['logger3'] | AllStudents CBV
+info: ['logger3'] | AllStudents CBV
+info: ['logger3'] | AllStudents CBV
+info: ['logger3'] | AllStudents CBV
+info: ['logger3'] | AllStudents CBV
+info: ['logger3'] | AllStudents CBV
+info: ['logger3'] | AllStudents CBV
+info: ['logger3'] | AllStudents CBV
+info: ['logger3'] | AllStudents CBV
+info: ['logger3'] | AllStudents CBV
+info: ['logger3'] | AllStudents CBV
+info: ['logger3'] | course_list
+info: ['logger3'] | users_list
+info: ['logger3'] | category_list
+info: ['logger3'] | course_list
+info: ['logger3'] | AllStudents CBV
+info: ['logger3'] | AllStudents CBV
+info: ['logger3'] | AllStudents CBV
+info: ['logger3'] | users_list
+info: ['logger3'] | AllStudents CBV

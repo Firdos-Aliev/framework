@@ -16,7 +16,7 @@ if __name__ == '__main__':
         {'name': "name1"},
         {'name': "name2"},
         {'name': "name3"}
-    ])
+    ], name=["user", "user2", "user3"])
     print(type(test))
     print(test)
     print(test.encode('utf-8'))

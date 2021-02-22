@@ -14,4 +14,6 @@ urls = {
     '/add_course/': views.add_course,
     '/add_category/': views.add_category,
     '/add_composite_category/': views.add_composite_category,
+    '/add_user_to_course/': views.add_user_to_course,
+    '/students/': views.AllStudents(),
 }

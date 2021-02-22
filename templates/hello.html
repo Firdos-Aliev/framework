@@ -4,4 +4,7 @@
     <p>Hello: {{ object_list.0.name }}</p>
     <p>Hello: {{ object_list.1.name }}</p>
     <p>Hello: {{ object_list.2.name }}</p>
+    {% for i in name %}
+        <p>{{ i }}</p>
+    {% endfor %}
 {% endblock %}
