@@ -1,5 +1,5 @@
 import abc
-
+from wsgi_engine import data_mapper
 
 class User(abc.ABC):
 
@@ -113,6 +113,8 @@ composite1.add(cat3)
 
 composite2.add(cat4)
 composite2.add(cat5)
+
+
 
 
 class Manager:
