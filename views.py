@@ -10,5 +10,8 @@ logger = Logger("logger")
 @debug
 def index(request):
     logger.log("info", "index")
+    context = {
+        "title": "index"
+    }
     print(f"request: {request}")
-    return "200", [render('index.html').encode('utf-8')]
+    return "200", [render('index.html', **context).encode('utf-8')]
