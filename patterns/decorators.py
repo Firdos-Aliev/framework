@@ -11,11 +11,3 @@ def debug(func):
 
     return wrapper
 
-
-#def app(path):
-#    def wrapper(func):
-#        print(path)
-#        print(func)
-#        # urls[path] = func
-#
-#    return wrapper

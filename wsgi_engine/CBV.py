@@ -26,7 +26,6 @@ class ListView(View):
 
     def query_set(self):
         query = self.query
-        # можно изменить передаваемый обьект
         return query
 
     def html_response(self):

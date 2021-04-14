@@ -13,11 +13,3 @@ class Logger(metaclass=Singleton):
         file.write(f"{level}: {self.name} | {text}\n")
         print(f"{level}: {self.name} | {text}")
 
-
-if __name__ == "__main__":
-    s1 = Logger("log1")
-    s2 = Logger("log2")
-    print(s1)
-    print(s2)
-    print(s1 == s2)
-

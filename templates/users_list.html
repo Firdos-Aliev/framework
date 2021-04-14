@@ -1,9 +1,0 @@
-{% extends "root.html" %}
-
-{% block container %}
-    <h3>Список пользователей</h3>
-    {% for i in users %}
-        <p>{{ i }}</p>
-    {% endfor %}
-    <a href="/add_user/">ДОбавить пользователя</a>
-{% endblock %}

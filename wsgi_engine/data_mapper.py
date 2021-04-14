@@ -23,12 +23,3 @@ class UserMapper:
         self.cursor.execute(request, (id,))
         self.connection.commit()
 
-
-if __name__ == "__main__":
-    connection = _sqlite3.connect("../framework.sqlite")
-    user_mapper = UserMapper(connection)
-
-    #user_mapper.edit_user("user_test", 2)
-    #user_mapper.delete_user(2)
-    result = user_mapper.find_user(2)
-    print(result)
